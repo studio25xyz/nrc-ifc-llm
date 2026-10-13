@@ -146,10 +146,10 @@ _The Duplex model coloured by synthetic operational carbon. The graph on the lef
 
 All commands run from this repository's root unless stated. The full toolkit builds and runs on Windows only.
 
-**Get the code.** Install Git, the .NET 8 SDK, Node.js, and Python 3. Clone with the toolkit, then fetch the repositories the toolkit is built from into `bim-open-toolkit/deps/`:
+**Get the code.** Install Git, the .NET 8 and .NET 10 SDKs, Node.js, and Python 3. Both SDKs are needed: with the .NET 8 SDK alone, the toolkit at the pinned `v0.1` does not compile (`SqlCompiler.cs`, error CS1002), so the MCP server build and the toolkit tests below fail. This repository's checks install both. Clone with the toolkit, then fetch the repositories the toolkit is built from into `bim-open-toolkit/deps/`:
 
 ```bash
-git clone --recurse-submodules https://github.com/ara3d/nrc-ifc-llm
+git clone --recurse-submodules https://github.com/studio25xyz/nrc-ifc-llm
 ```
 
 ```bash
