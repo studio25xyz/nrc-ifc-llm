@@ -8,7 +8,7 @@ Sources:
 
 - **SOW**: [statement-of-work.md](statement-of-work.md), the contract with the National
   Research Council Canada (NRC).
-- **M1–M5, I1–I9**: [paper/handoff-needs.md](paper/handoff-needs.md), the minimal (M) and
+- **M1–M5, I1–I9**: the paper's handoff notes (`paper/handoff-needs.md`, removed with the rest of the paper text on 2026-10-14, when the paper went to the NRC as a Word document), the minimal (M) and
   ideal (I) items for the paper.
 - **W6**: workflow 6 of the toolkit's brief, `PROJECT.md` in `bim-open-toolkit` at the pin,
   "Reproduce the paper, including the write-back, with one command".

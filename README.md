@@ -50,7 +50,7 @@ The obvious answer to the first question is "add property sets to the IFC file a
 5. **It does not scale.** Scenarios, time series, and hundreds of metrics per element inflate the file. Of the twelve IFC mechanisms the paper compares (Table 1), only an external table referenced from the file scales to millions of values.
 6. **Every new view would mean rewriting the file.** Colouring the model by a different metric or scenario from a table is a parameter change. Colouring it from property sets requires writing those values into the file first.
 
-What the file is good for is carrying a short, self-describing summary to people who use ordinary IFC viewers. So the recommendation in [paper v2, section 3](paper/paper-v2.md) is three layers: summary property sets in the file, a reference from the file to the full table, and a metric dictionary from which both are generated. Every question in the proof of concept is answered from tables, not from the file.
+What the file is good for is carrying a short, self-describing summary to people who use ordinary IFC viewers. So the recommendation in section 3 of the technical paper (version 2) is three layers: summary property sets in the file, a reference from the file to the full table, and a metric dictionary from which both are generated. Every question in the proof of concept is answered from tables, not from the file.
 
 ## Why the language model speaks in graphs
 
@@ -128,7 +128,7 @@ The statement of work names four deliverables. Status as of 2026-10-05; [REQUIRE
 |---|---|---|
 | D1. Options analysis brief | [storing-analytics-in-ifc.md](storing-analytics-in-ifc.md) (the brainstorm of twelve mechanisms) and paper v2 sections 3 and 4 (the comparison and recommendation) | Partly met: the analysis exists inside the paper, not as a separate short brief. |
 | D2. Proof-of-concept package | [poc/](poc/README.md) and the toolkit's `samples/nrc/` | Met: an enriched IFC model, the question-answering agent with recorded runs, 3D colourings, source, and documentation. |
-| D3. Technical paper | [paper/paper-v2.md](paper/paper-v2.md) (start at [paper/README.md](paper/README.md)) | Written; the NRC's editorial review has not happened. |
+| D3. Technical paper | Version 2 (2026-10-04), delivered to the NRC as a Word document; not kept in this repository | Written; the NRC's editorial review has not happened. |
 | D4. Final presentation and handover | Not in the repository | Not done. |
 
 The proof of concept shows, on the public buildingSMART Duplex model:
@@ -227,13 +227,13 @@ The last command builds the toolkit projects the tests need: about 2 minutes on 
 - The eight-question measurement uses one model family and one small building.
 - The toolkit runs only on Windows, as a single-user local server.
 
-[paper/poc-gap-report.md](paper/poc-gap-report.md) and [paper/handoff-needs.md](paper/handoff-needs.md) list the remaining work in detail.
+[REQUIREMENTS.md](REQUIREMENTS.md) lists the remaining work row by row.
 
 ## Repository map
 
 | Path | What it holds |
 |---|---|
-| [paper/](paper/README.md) | The technical paper (deliverable D3), version 2 in `paper-v2.md`, version 1 one file per section, and the figures. |
+| `paper/figures/` | The figures of the technical paper and this README. The paper itself (deliverable D3) is delivered as a Word document and is not kept here. |
 | [poc/](poc/README.md) | The proof of concept: synthetic data generator, enrichment program, expected answers, recorded and scored model runs, and graphs. |
 | `bim-open-toolkit/` | The toolkit, a git submodule pinned at tag `v0.1`. Not edited from here. |
 | `checks/` | The path check that keeps the documentation in step with the pinned toolkit. |
